@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\Lenomdelatable;
+use App\Entity\Employes;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Lenomdelatable>
+ * @extends ServiceEntityRepository<Employes>
  *
- * @method Lenomdelatable|null find($id, $lockMode = null, $lockVersion = null)
- * @method Lenomdelatable|null findOneBy(array $criteria, array $orderBy = null)
- * @method Lenomdelatable[]    findAll()
- * @method Lenomdelatable[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Employes|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Employes|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Employes[]    findAll()
+ * @method Employes[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class LenomdelatableRepository extends ServiceEntityRepository
+class EmployesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Lenomdelatable::class);
+        parent::__construct($registry, Employes::class);
     }
 
 //    /**
-//     * @return Lenomdelatable[] Returns an array of Lenomdelatable objects
+//     * @return Employes[] Returns an array of Employes objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class LenomdelatableRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Lenomdelatable
+//    public function findOneBySomeField($value): ?Employes
 //    {
 //        return $this->createQueryBuilder('l')
 //            ->andWhere('l.exampleField = :val')
