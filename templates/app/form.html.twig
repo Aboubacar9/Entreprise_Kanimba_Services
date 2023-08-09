@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Forumlaire{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center my-4">Ajouter un employé</h1>
+    <div class="container">
+    {# <h1>{{ form(form) }}</h1> #}
+    {{form_start(form)}}
+        {{form_row(form.nom)}}
+        {{form_row(form.prenom)}}
+        {{form_row(form.telephone)}}
+        {{form_row(form.email)}}
+        {{form_row(form.adresse)}}
+        {{form_row(form.poste)}}
+        {{form_row(form.salaire)}}
+        {{form_row(form.datedenaissance)}}
+    {{form_end(form)}}
+    </div>
+
+    
+{% endblock %}

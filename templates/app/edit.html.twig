@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des employés{% endblock %}
+
+{% block body %}
+
+<table classe="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Numéro de téléphone</th>
+            <th>Email</th>
+            <th>Adresse</th>
+            <th>Poste</th>
+            <th>Salaire</th>
+            <th>Date de naissance</th>
+            <th>Option</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for objet in objet %}
+
+            <tr>
+                <td>{{ objet.id }}</td>
+                <td>{{ objet.firstname }}</td>
+                <td>{{ objet.lastname }}</td>
+                <td>{{ objet.phonenumber }}</td>
+                <td>{{ objet.email }}</td>
+                <td>{{ objet.address }}</td>
+                <td>{{ objet.job }}</td>
+                <td>{{ objet.salary }}</td>
+                <td>{{ objet.dateofbirth|date('d/m/Y à H:i:s') }}</td>
+                <td>
+                    <a href="" class="text-info">View</a>
+                    <a href="{{ path('update', {id: objet.id}) }}" class="text-">Update</a>
+                    <a href="{{ path('delete', {id: objet.id}) }}" class="text-">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -12,6 +12,7 @@ class Employes
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Assert\NotBlank(message:"veuillez saisir ce champs")]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
@@ -43,6 +44,7 @@ class Employes
     private ?string $salaire = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"veuillez saisir ce champs")]
     private ?string $datedenaissance = null;
 
     public function getId(): ?int
